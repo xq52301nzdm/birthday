@@ -1,0 +1,163 @@
+一、使用vite或者其他构建工具初始化项目
+
+npm create vite@latest
+
+选择框架：vue
+选择语言：typescript
+选择包管理器：npm
+
+
+二、安装需要的依赖
+
+axios：处理网络请求
+
+使用axios拦截器
+1、对请求进行拦截，在请求之前请求头中添加公共需要携带的部分，同时做参数合法校验、拦截处理、loading
+2、对响应进行拦截，在响应返回之前添加前置处理，如处理全局通用异常处理、业务异常处理、loading，使用Promise对返回结果包装
+
+同时配置跨域代理
+
+
+vuex/pinia：全局状态管理
+1、定义全局公共状态，如用户信息、系统配置等
+2、
+
+vue-router：路由管理
+
+element-plus：UI组件库
+
+sass：css预编译器
+
+npm install xxxx
+
+三、响应式布局
+
+在不同尺寸大小的设备上等比放大/缩小，展示相同的内容
+
+实现方式——rem：基于根元素的字体大小，根元素默认是html，根元素字体大小默认16px
+
+实现过程
+1、确定一个基础的比例，按该比例在设计图中取值，如宽度为375，根元素字体为16px
+2、将px转为rem
+3、动态改变根元素字体的大小(等于动态改变rem的值)
+
+主流方案为使用postcss
+
+配置方法：
+
+1、安装依赖
+npm install postcss postcss-loader
+
+2、安装需要的插件(按需安装即可)
+
+postcss-pxtorem ：将px转为rem
+postcss-import：导入css文件
+autoprefixer：自动添加浏览器前缀
+
+npm install postcss-pxtorem autoprefixer postcss-import
+
+3、新建postcss.config.js，按照文档示例进行配置
+
+import autoprefixer from 'autoprefixer'
+import postCssImport from 'postcss-import'
+import pxToRem from 'postcss-pxtorem'
+
+export default {
+	plugins: [
+		postCssImport(),
+		autoprefixer({
+			overrideBrowserslist: [
+				'Android 4.1',
+				'iOS 7.1',
+				'Chrome > 31',
+				'not ie <= 11', //不考虑IE浏览器
+				'ff >= 30', //仅新版本用“ff>=30
+				'> 1%', //  全球统计有超过1%的使用率使用“>1%”;
+				'last 2 versions' // 所有主流浏览器最近2个版本
+			],
+			grid: false // 开启grid布局的兼容(浏览器IE除外其他都能兼容grid，可以关闭开启)
+		}),
+		pxToRem({
+            // 设置为根元素默认设置的字体大小
+			rootValue: 16,
+            // 计算结果保留几位小数
+			unitPrecision: 5, 
+            // 要忽略的选择器并保留为px。
+			selectorBlackList: ['.no-rem', 'no-rem'],
+            // 可以从px更改为rem的属性  感叹号开头的不转换
+			propList: ['*'], 
+            // 转换成 rem 以后，不保留原来的 px 单位属性
+			replace: true,
+            // 允许在媒体查询中转换px。
+			mediaQuery: true, 
+            // 设置要替换的最小像素值。
+			minPixelValue: 2, 
+            // 指定不需要转换的内容
+			exclude: /node_modules/ 
+		})
+	]
+}
+
+到现在为止已经可以将px转为rem了
+
+注意：行内样式 <div style="width: 20px"></div>这种是无法被postcss处理的，如果需要写行内样式，可以直接使用rem单位
+
+4、动态变更rem的值，监听window.resize事件，设定一个基准值，宽度超过基准值的时候，rem值等比变大，宽度小于基准值，rem值等比变小
+
+! function (x) {
+function w() {
+    var v, u, t, tes, s = x.document,
+    r = s.documentElement,
+    a = r.getBoundingClientRect().width;
+    if (!v && !u) {
+    var n = !!x.navigator.appVersion.match(/AppleWebKit.*Mobile.*/);
+    v = x.devicePixelRatio;
+    tes = x.devicePixelRatio;
+    v = n ? v : 1, u = 1 / v
+    }
+    if (a >= 2560) {
+    r.style.fontSize = "16px"
+    } else {
+    if (a < 1080) {
+        r.style.fontSize = "12px"
+    } else {
+        r.style.fontSize = a / 320 * 16 + "px"
+    }
+    }
+}
+x.addEventListener("resize", function () {
+    w()
+})
+w()
+}(window);
+
+四、ts配置(视情况可选)
+
+五、vue路由搭建
+
+hash路由、history路由
+如果是history路由，需要配置服务器，否则刷新页面会404
+
+相关的其他配置，如
+KeepAlive 组件缓存配置
+Router    路由跳转
+
+六、src下新建对应的功能模块，存放页面、组件、接口、store、types、utils等，同时引入reset.css去除css默认样式
+
+七、配置别名方便引入 @/xxx
+
+八、babel配置
+
+配置babel以使用ES6、ES7等新特性
+
+九、环境变量及package.json script配置，
+
+配置环境变量如test、dev、prod等
+配置npm run xx分别执行不同环境的启动、打包等执行脚本
+
+十、打包配置
+
+打包时移除全局console.log
+定义打包目录
+
+其他插件配置······(视情况而定)

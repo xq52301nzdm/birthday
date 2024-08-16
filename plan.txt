@@ -1,0 +1,12 @@
+准备工作
+
+Vivus web
+https://github.com/maxwellito/vivus
+
+Google-font-to-svg-path
+确认好字体后得记录，否则无法找回
+
+
+
+流程
+1、
