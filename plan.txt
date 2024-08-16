@@ -4,6 +4,7 @@ Vivus web
 https://github.com/maxwellito/vivus
 
 Google-font-to-svg-path
+https://danmarshall.github.io/google-font-to-svg-path/
 确认好字体后得记录，否则无法找回
 
 
