@@ -9,4 +9,14 @@ Google-font-to-svg-path
 
 
 流程
-1、
+1、show welcome word !
+
+2、show many photo repeat !
+
+3、play birthday sound
+
+4、swiper photo !
+
+5、show gift !
+
+6、memory back life !
