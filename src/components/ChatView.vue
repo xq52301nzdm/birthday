@@ -23,10 +23,14 @@
 								class="chat-item-other-content"
 								v-html="mdParser.render(item.message)"
 							/>
-							<!-- <div
-								v-if="item.isLoading"
-								class="chat-item-other-fade"
-							/> -->
+							<div
+								v-if="!item.isLoading"
+								class="chat-item-operate-menu"
+							>
+								<div class="chat-item-operate-menu-item">更具体一点</div>
+								<div class="chat-item-operate-menu-item">更简洁一点</div>
+								<div class="chat-item-operate-menu-item">更一点</div>
+							</div>
 						</div>
 					</template>
 				</div>
@@ -110,7 +114,7 @@ sayHello();
 这将导致在控制台中输出 "Hello World!"。`,
 		type: 'model',
 		time: new Date().toDateString(),
-		isLoading: true
+		isLoading: false
 	})
 })
 
@@ -213,6 +217,30 @@ const useChatWithContext = async (question: string) => {
 				position: relative;
 				flex: 1;
 
+				.chat-item-operate-menu {
+					width: 100%;
+					height: 32px;
+					display: flex;
+
+					.chat-item-operate-menu-item {
+						width: max-content;
+						padding: 5px 10px;
+						border-radius: 8px;
+						box-sizing: border-box;
+						background: rgba(255, 255, 255, 0.1);
+						margin: 0 5px;
+						font-size: 13px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					.chat-item-operate-menu-item:hover {
+						background: rgba(255, 255, 255, 0.2);
+						cursor: pointer;
+					}
+				}
+
 				.chat-item-other-fade {
 					position: absolute;
 					width: calc(100% - 40px);
@@ -234,10 +262,6 @@ const useChatWithContext = async (question: string) => {
 						font-size: 14px;
 					}
 				}
-			}
-
-			.isLoading {
-
 			}
 		}
 	}
