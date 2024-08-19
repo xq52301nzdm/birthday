@@ -27,9 +27,11 @@
     "postcss-loader": "^8.1.1",
     "postcss-pxtorem": "^6.1.0",
     "sass": "^1.77.8",
+    "typed.js": "^2.1.0",
     "vivus": "^0.4.6",
     "vue": "^3.4.35",
-    "vue-router": "^4.4.3"
+    "vue-router": "^4.4.3",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",

@@ -7,17 +7,22 @@ Google-font-to-svg-path
 https://danmarshall.github.io/google-font-to-svg-path/
 确认好字体后得记录，否则无法找回
 
+当前使用字体    Mystery Quest
 
 
 流程
-1、show welcome word !
+*、show welcome word !
 
-2、show many photo repeat !
+*、show many photo repeat !
 
-3、play birthday sound
+*、play birthday sound
 
-4、swiper photo !
+*、drop many photo ! play aidehuiguixian bgm
 
-5、show gift !
+*、
 
-6、memory back life !
+*、swiper photo !
+
+*、show gift !
+
+*、memory back life !
