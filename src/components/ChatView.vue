@@ -161,6 +161,7 @@ const useChatWithContext = async (question: string) => {
 		console.log(error, 'error')
 	}
 	ChatList.value[ChatList.value.length - 1].isLoading = false
+	
 }
 </script>
 
