@@ -99,24 +99,24 @@ onMounted(() => {
 	})
 })
 
-setTimeout(() => {
-	ChatList.value.push({
-		message: `\`\`\`javascript
-function sayHello() {
-	console.log("Hello World!");
-}
-\`\`\`
-这个函数名为 \`sayHello\`，它什么也不接收，并在控制台输出 \`Hello World!\`。
-你可以像这样调用它：
-\`\`\`javascript
-sayHello();
-\`\`\`
-这将导致在控制台中输出 "Hello World!"。`,
-		type: 'model',
-		time: new Date().toDateString(),
-		isLoading: false
-	})
-})
+// setTimeout(() => {
+// 	ChatList.value.push({
+// 		message: `\`\`\`javascript
+// function sayHello() {
+// 	console.log("Hello World!");
+// }
+// \`\`\`
+// 这个函数名为 \`sayHello\`，它什么也不接收，并在控制台输出 \`Hello World!\`。
+// 你可以像这样调用它：
+// \`\`\`javascript
+// sayHello();
+// \`\`\`
+// 这将导致在控制台中输出 "Hello World!"。`,
+// 		type: 'model',
+// 		time: new Date().toDateString(),
+// 		isLoading: false
+// 	})
+// })
 
 const onSearch = (question: string) => {
 	const userMsg = {
