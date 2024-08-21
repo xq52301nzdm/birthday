@@ -29,7 +29,7 @@
 							>
 								<div class="chat-item-operate-menu-item">更具体一点</div>
 								<div class="chat-item-operate-menu-item">更简洁一点</div>
-								<div class="chat-item-operate-menu-item">更一点</div>
+								<div class="chat-item-operate-menu-item">更幽默一点</div>
 							</div>
 						</div>
 					</template>
@@ -219,8 +219,9 @@ const useChatWithContext = async (question: string) => {
 
 				.chat-item-operate-menu {
 					width: 100%;
-					height: 32px;
+					min-height: 32px;
 					display: flex;
+					padding: 0px 20px;
 
 					.chat-item-operate-menu-item {
 						width: max-content;
@@ -228,8 +229,9 @@ const useChatWithContext = async (question: string) => {
 						border-radius: 8px;
 						box-sizing: border-box;
 						background: rgba(255, 255, 255, 0.1);
-						margin: 0 5px;
 						font-size: 13px;
+						margin-right: 10px;
+						margin-top: 3px;
 						display: flex;
 						align-items: center;
 						justify-content: center;
