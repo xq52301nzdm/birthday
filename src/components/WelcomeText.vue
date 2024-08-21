@@ -187,15 +187,15 @@ defineExpose({
 	overflow: hidden;
 
 	.welcome-text-container {
-		width: 80vw;
-		height: 300px;
+		width: 100%;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		.welcome-text-word {
 			visibility: hidden;
-			margin: 0 10px;
+			margin: 0 10px 20vh;
 		}
 	}
 }
