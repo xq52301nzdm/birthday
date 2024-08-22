@@ -8,6 +8,7 @@
 </template>
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import anime from 'animejs'
 
 const container = ref<HTMLElement>()
 
@@ -15,7 +16,27 @@ const container = ref<HTMLElement>()
 function dropImg() {
 	const img = randomImg()
 	container.value?.appendChild(img)
-	setTimeout(() => {}, 1000)
+	anime({
+		targets: img,
+		opacity: 1,
+		duration: 500,
+		easing: 'linear',
+		complete: () => {
+			let timer: number | null = setTimeout(() => {
+				anime({
+					targets: img,
+					opacity: 0,
+					duration: 2000,
+					easing: 'linear',
+					complete: () => {
+						clearTimeout(timer!)
+						timer = null
+						img.remove()
+					}
+				})
+			}, 5000)
+		}
+	})
 }
 
 function getRandomInt(min: number, max: number) {
@@ -35,6 +56,7 @@ function randomImg() {
 	img.style.top = `${Math.random() * 100}vh`
 	img.style.left = `${Math.random() * 100}vw`
 	img.style.zIndex = `${Math.random() * 100}`
+	img.style.opacity = `0`
 	return img
 }
 

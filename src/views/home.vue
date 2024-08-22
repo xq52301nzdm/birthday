@@ -1,9 +1,9 @@
 <template>
 	<!-- <WelcomeText ref="WelcomeTextRef" /> -->
 	<!-- <PlayVoice ref="PlayVoiceRef" /> -->
-	<!-- <RandomImg ref="RandomImgRef" /> -->
+	<RandomImg ref="RandomImgRef" />
 	<!-- <NoteBook ref="NoteBookRef" /> -->
-	<DropImg ref="DropImgRef" />
+	<!-- <DropImg ref="DropImgRef" /> -->
 </template>
 <script setup lang="ts">
 import { ref, onMounted, Ref } from 'vue'

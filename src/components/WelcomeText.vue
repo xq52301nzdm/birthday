@@ -195,7 +195,7 @@ defineExpose({
 
 		.welcome-text-word {
 			visibility: hidden;
-			margin: 0 10px 20vh;
+			margin: 0 30px 20vh;
 		}
 	}
 }
