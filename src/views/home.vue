@@ -1,7 +1,8 @@
 <template>
+	<div>Home页</div>
 	<!-- <WelcomeText ref="WelcomeTextRef" /> -->
 	<!-- <PlayVoice ref="PlayVoiceRef" /> -->
-	<RandomImg ref="RandomImgRef" />
+	<!-- <RandomImg ref="RandomImgRef" /> -->
 	<!-- <NoteBook ref="NoteBookRef" /> -->
 	<!-- <DropImg ref="DropImgRef" /> -->
 </template>
@@ -29,6 +30,7 @@ const RandomImgRef = ref<Ref<InstanceType<typeof RandomImg>> | null>(null)
 const DropImgRef = ref<Ref<InstanceType<typeof DropImg>> | null>(null)
 
 onMounted(async () => {
+	console.log('home', 'Home页 onMounted')
 	// await NoteBookRef.value?.autoWriteTitle()
 	// await NoteBookRef.value?.autoWriteContent1()
 	// WelcomeTextRef.value?.playWelcomeText()
