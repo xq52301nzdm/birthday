@@ -7,6 +7,12 @@ Google-font-to-svg-path
 https://danmarshall.github.io/google-font-to-svg-path/
 确认好字体后得记录，否则无法找回
 
+animista
+https://animista.net/play/text/tracking-in/tracking-in-contract-bck
+
+
+
+
 当前使用字体    Mystery Quest
 
 
@@ -26,3 +32,29 @@ https://danmarshall.github.io/google-font-to-svg-path/
 *、show gift !
 
 *、memory back life !
+
+
+经过xxxx天的不懈努力，终于赶在了生日之前完成了这一记录
+
+点击开启回忆杀
+
+beforeMeet 
+gray background And alone person
+
+afterMeet
+colorful background And together person
+
+出现标题(2024-11-11)日期效果+经纬度
+
+然后日期特殊动画消失 第一个青岛的有video
+展示日期对应发生的事，展示照片，地点等
+
+重复多个不同日期，使用不同转场效果
+
+时间来到现在 2024-10-18
+
+
+
+
+
+

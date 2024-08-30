@@ -6,6 +6,8 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import Router from './router/index'
 import { createPinia } from 'pinia'
+import './theme-dark.scss'
+import './theme-light.scss'
 
 const app = createApp(App)
 const pinia = createPinia()

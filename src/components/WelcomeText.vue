@@ -142,6 +142,7 @@ const querySvgElement = () => {
 	return list
 }
 
+/** Vivus svg描边动画 */
 const useSvgAnimate: (svgId: string) => Promise<void> = (svgId: string) => {
 	return new Promise(resolve => {
 		new Vivus(
@@ -156,6 +157,7 @@ const useSvgAnimate: (svgId: string) => Promise<void> = (svgId: string) => {
 	})
 }
 
+/** 占位 */
 const useOpacity: (svgNode: HTMLElement) => Promise<void> = (svgNode: HTMLElement) => {
 	return new Promise(resolve => {
 		svgNode.style.visibility = `visible`
@@ -163,6 +165,7 @@ const useOpacity: (svgNode: HTMLElement) => Promise<void> = (svgNode: HTMLElemen
 	})
 }
 
+/** 按序展示欢迎语的每个字 */
 const playWelcomeText: () => Promise<void> = () => {
 	return new Promise(async resolve => {
 		const svgIdList = querySvgElement()

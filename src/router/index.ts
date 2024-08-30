@@ -4,7 +4,7 @@ import { useRouterCacheConfigStore } from '../store/index'
 
 const routes = import.meta.glob('../views/*.vue')
 
-console.log(routes, 'routes')
+// console.log(routes, 'routes')
 
 const routerList = [
     {
@@ -31,7 +31,7 @@ const router = createRouter({
 })
 
 
-let historyStack = []; // 用于记录路由的历史栈
+let historyStack: string[] = []; // 用于记录路由的历史栈
 
 router.beforeEach(async (to, from) => {
     const store = useRouterCacheConfigStore()
@@ -58,9 +58,8 @@ router.beforeEach(async (to, from) => {
     // }
 })
 
-router.afterEach(async (to, from) => {
+router.afterEach((to, from) => {
 
 })
-
 
 export default router

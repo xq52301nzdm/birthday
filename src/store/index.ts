@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 export const useRouterCacheConfigStore = defineStore('RouterCacheConfig', () => {
     const cachedNameList = ref<string[]>([])

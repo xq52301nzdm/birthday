@@ -9,7 +9,8 @@
 import { ref } from 'vue'
 const audio = ref<HTMLAudioElement>()
 
-const playBgMusic = () => {
+const playBgMusic = (src: string) => {
+	audio.value!.src = src
 	audio.value!.play()
 }
 

@@ -9,21 +9,24 @@
 			@click="traceSearch"
 			:class="`send-icon-active`"
 			title="上传图片"
-			><PictureFilled
-		/></el-icon>
+		>
+			<PictureFilled />
+		</el-icon>
 
 		<el-icon
 			@click="traceSearch"
 			:class="`send-icon-active`"
 			title="语音输入"
-			><Microphone
-		/></el-icon>
+		>
+			<Microphone />
+		</el-icon>
 
 		<el-icon
 			@click="traceSearch"
 			:class="searchValue ? `send-icon-active` : `send-icon`"
-			><Promotion
-		/></el-icon>
+		>
+			<Promotion />
+		</el-icon>
 	</div>
 </template>
 <script lang="ts" setup>
