@@ -8,5 +8,8 @@ export default defineConfig({
     outDir: 'docs',
     assetsDir: './'
   },
+  server: {
+    host: true,
+  },
   plugins: [vue()],
 })

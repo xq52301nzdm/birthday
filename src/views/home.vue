@@ -3,12 +3,13 @@
 	<!-- <PlayVoice ref="PlayVoiceRef" /> -->
 	<!-- <RandomImg ref="RandomImgRef" /> -->
 	<!-- <NoteBook ref="NoteBookRef" /> -->
-	<DropImg ref="DropImgRef" />
+	<!-- <DropImg ref="DropImgRef" /> -->
 	<!-- <LookbackUpon /> -->
 	<!-- <TimeRange /> -->
 	<!-- <PhotoGrid /> -->
 	<!-- <LoopPicture /> -->
 	<!-- <GrayLife /> -->
+	<GridBox />
 </template>
 <script setup lang="ts">
 import { ref, onMounted, Ref } from 'vue'
@@ -22,6 +23,7 @@ import TimeRange from '../components/TimeRange.vue'
 import PhotoGrid from '../components/PhotoGrid.vue'
 import LoopPicture from '../components/LoopPicture.vue'
 import GrayLife from '../components/GrayLife.vue'
+import GridBox from '../components/GridBox.vue'
 
 /** 播放欢迎语 */
 const WelcomeTextRef = ref<Ref<InstanceType<typeof WelcomeText>> | null>(null)

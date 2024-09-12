@@ -30,6 +30,7 @@
     "postcss-pxtorem": "^6.1.0",
     "sass": "^1.77.8",
     "typed.js": "^2.1.0",
+    "vant": "^4.9.5",
     "vivus": "^0.4.6",
     "vue": "^3.4.35",
     "vue-router": "^4.4.3",

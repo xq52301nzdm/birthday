@@ -60,6 +60,7 @@ for (let i = 0; i < rowLineCount.value; i++) {
 function startScrolling(direction: `left` | `right`, rowIndex: number) {
 	const scrollContainer = [...document.querySelectorAll('.outter-scroller')][rowIndex]
 
+	// 元素实际宽度，包含超出屏幕之外不可见的部分
 	const scrollContainerWidth = scrollContainer.scrollWidth
 
 	// 克隆内容并追加到末尾

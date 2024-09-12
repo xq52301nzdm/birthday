@@ -1,0 +1,37 @@
+.custom-editor-container {
+    color: #efe2e2;
+    flex: 1;
+    font-size: 14px;
+    border-radius: 28px;
+    background: #282a2c;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 30px !important;
+    line-height: 23px !important;
+    box-sizing: border-box;
+    max-height: 150px;
+    padding: 5px 17px;
+    overflow-y: auto;
+    border: none;
+    resize: none;
+    outline: none;
+
+    .tiptap,
+    .ProseMirror,
+    .ProseMirror-focused {
+        outline: none !important;
+        border: none !important;
+    }
+
+    .tiptap p.is-editor-empty:first-child::before {
+        color: gray;
+        content: '请输入您的问题';
+        float: left;
+        height: 0;
+        pointer-events: none;
+    }
+}
+
+.custom-editor-container::-webkit-scrollbar {
+    display: none;
+}
